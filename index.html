@@ -1,0 +1,28 @@
+<!Doctype HTML>
+<html>
+<head>
+</head>
+<body>
+<p> Hello world! </p>
+
+<!-- Include the PubNub Library -->
+<script src="https://cdn.pubnub.com/pubnub.min.js"></script>
+ 
+<!-- Instantiate PubNub -->
+<script type="text/javascript">
+
+  var PUBNUB_demo = PUBNUB.init({
+    publish_key: 'pub-c-070e965a-06c7-4dc1-84c5-4cf0d2a587ea',
+    subscribe_key: 'sub-c-d9379cc0-a358-11e4-8d94-0619f8945a4f' // this is Joseph's keys
+  });
+
+//Subscribe to the demo_tutorial channel
+PUBNUB_demo.subscribe({
+  channel: 'demo_tutorial',
+  message: function(m){console.log(m)}
+});
+  
+</script>
+
+</body>
+</html>
